@@ -5,6 +5,5 @@
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presenter.MainActivity">
-
-  </androidx.fragment.app.FragmentContainerView>
+    android:name="com.myhome.android.guessnumber.presenter.WelcomeFragment"
+    tools:context=".presenter.MainActivity"/>
