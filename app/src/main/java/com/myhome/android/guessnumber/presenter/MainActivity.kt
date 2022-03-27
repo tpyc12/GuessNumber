@@ -1,7 +1,8 @@
-package com.myhome.android.guessnumber
+package com.myhome.android.guessnumber.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.myhome.android.guessnumber.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
