@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Guess Number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Правила игры: перед вами буде три фигуры, две снизу и одна сверху,
+        в двух из них будут числа. Неоходимо, тобы сумма чисел из двух нижних фигур была равна
+        числу в верхней фигуре,для этого нужно вставить недостающее число. \n \nПример: в верхнем
+        круге число 7, в одном из нижних знак вопроса, а в другом число 4. Значит на месте
+        вопросительного знака должно быть число 3, потому что 3 + 4 = 7</string>
+    <string name="welcome_logo">Приветственная картинка</string>
+    <string name="description_title">Состав числа</string>
+    <string name="understand">Понятно</string>
+    <string name="chose_level_title">Выберите уровень:</string>
+    <string name="test_level_title">Тестовый</string>
+    <string name="easy_level_title">Легкий</string>
+    <string name="normal_level_title">Средний</string>
+    <string name="hard_level_title">Тяжелый</string>
+    <string name="guess_number">\?</string>
+    <string name="count_of_right_answers_and_min_count">Правильных ответов %s (минимум %s)</string>
+    <string name="game_over_picture">Игра окончена</string>
+    <string name="required_right_answers">Необходимое количество правильных ответов: %s</string>
+    <string name="count_of_right_answers">Ваш счет: %s</string>
+    <string name="required_percentage_of_right_answers">Необходимый процент правльных ответов: %s</string>
+    <string name="right_answers_percentage">Процент правльных ответов: %s</string>
+    <string name="retry_button">Попробовать снова</string>
+
 </resources>
