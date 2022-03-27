@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Guess Number</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="description">Правила игры: перед вами буде три фигуры, две снизу и одна сверху,
         в двух из них будут числа. Неоходимо, тобы сумма чисел из двух нижних фигур была равна
