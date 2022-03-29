@@ -22,5 +22,6 @@
     <string name="required_percentage_of_right_answers">Необходимый процент правльных ответов: %s</string>
     <string name="right_answers_percentage">Процент правльных ответов: %s</string>
     <string name="retry_button">Попробовать снова</string>
+    <string name="progress_answers">Правильных ответов %s (минимум %s)</string>
 
 </resources>
