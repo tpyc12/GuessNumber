@@ -38,7 +38,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         get() = _question
 
     private val _percentOfRightAnswers = MutableLiveData<Int>()
-    val percentOfRightQuestions: LiveData<Int>
+    val percentOfRightAnswers: LiveData<Int>
         get() = _percentOfRightAnswers
 
     private val _progressAnswers = MutableLiveData<String>()
@@ -65,6 +65,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         getGameSettings(level)
         startTimer()
         generateQuestion()
+        updateProgress()
     }
 
     fun chooseAnswer(number: Int) {
@@ -87,7 +88,10 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun calculatePercentOfRightAnswers(): Int {
-        return (countOfRightAnswers / countOfQuestions.toDouble()).toInt()
+        if (countOfQuestions == 0){
+            return 0
+        }
+        return (countOfRightAnswers / countOfQuestions.toDouble() * 100).toInt()
     }
 
     private fun checkAnswer(number: Int) {
@@ -136,8 +140,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     private fun formatTime(millisUntilFinished: Long): String {
         val seconds = millisUntilFinished / MILLIS_IN_SECOND
         val minutes = seconds / SECONDS_IN_MINUTE
-        val leftSeconds = seconds - (minutes - SECONDS_IN_MINUTE)
-        return String.format("%02d:%02d", minutes, leftSeconds)
+        return String.format("%02d:%02d", minutes, seconds)
     }
 
     override fun onCleared() {
