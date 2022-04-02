@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.myhome.android.guessnumber.R
+import androidx.navigation.fragment.findNavController
 import com.myhome.android.guessnumber.databinding.FragmentChoseLevelBinding
 import com.myhome.android.guessnumber.domain.entity.Level
 
@@ -47,23 +47,13 @@ class ChoseLevelFragment : Fragment() {
     }
 
     private fun launchGameFragment(level: Level) {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, GameFragment.newInstance(level))
-            .addToBackStack(GameFragment.NAME)
-            .commit()
+        findNavController().navigate(
+            ChoseLevelFragmentDirections.actionChoseLevelFragmentToGameFragment(level)
+        )
     }
 
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    companion object {
-
-        const val NAME = "ChoseLevelFragment"
-
-        fun newInstance(): ChoseLevelFragment {
-            return ChoseLevelFragment()
-        }
     }
 }
